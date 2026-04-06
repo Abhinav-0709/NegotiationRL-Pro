@@ -1,0 +1,47 @@
+name: NegotiationRL-Pro
+version: 2.0.0
+description: A high-fidelity, multi-issue negotiation simulator for training RL agents with personality perception.
+tags:
+  - openenv
+  - pytorch-meta-hackathon
+  - multi-agent-strategy
+  - game-theory
+  - reinforcement-learning
+
+interface:
+  framework: pytorch
+  observation_space:
+    type: Box
+    shape: [4]
+    description: [round_norm, last_offer_price, target_price, limit_price]
+  action_space:
+    type: Discrete
+    n: 3
+    description: [OFFER, ACCEPT, WALK_AWAY]
+
+tasks:
+  - id: easy_negotiation
+    name: Quick Deal
+    difficulty: Easy
+    opponent: COOPERATIVE
+  - id: medium_negotiation
+    name: Strategic Gap
+    difficulty: Medium
+    opponent: TIT_FOR_TAT
+  - id: hard_negotiation
+    name: Executive Standoff
+    difficulty: Hard
+    opponent: AGGRESSIVE
+
+evaluation:
+  primary_metric: nash_bargaining_efficiency
+  secondary_metrics:
+    - pareto_optimality
+    - social_welfare
+  range: [0.0, 1.0]
+
+huggingface:
+  repo_id: your-username/negotiation-rl-model
+  tags: ["rl", "negotiation", "openenv"]
+
+entry_point: baseline/torch_agent.py

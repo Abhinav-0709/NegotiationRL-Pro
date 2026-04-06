@@ -1,0 +1,10 @@
+pydantic>=2.0.0
+numpy
+pyyaml
+torch>=2.0.0
+transformers
+huggingface_hub
+gymnasium
+fastapi
+uvicorn
+python-multipart
