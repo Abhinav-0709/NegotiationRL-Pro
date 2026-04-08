@@ -1,3 +1,12 @@
+---
+title: NegotationRL Pro
+emoji: 🤝
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # 🏆 NegotiationRL-Pro: Advanced Multi-Agent Negotiation Env
 
 **Submission for Meta PyTorch Hackathon (National Level)**
