@@ -44,4 +44,4 @@ huggingface:
   repo_id: your-username/negotiation-rl-model
   tags: ["rl", "negotiation", "openenv"]
 
-entry_point: baseline/torch_agent.py
+entry_point: inference.py
