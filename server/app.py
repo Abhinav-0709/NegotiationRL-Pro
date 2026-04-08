@@ -1,5 +1,11 @@
+import sys
+import os
 from fastapi import FastAPI, HTTPException
 from typing import Dict, Any, Optional
+
+# Add project root to path so we can find 'env'
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from env.environment import NegotiationEnv
 from env.models import Action, Observation, Reward, State, ActionType, NegotiationOffer
 from env.tasks import get_task

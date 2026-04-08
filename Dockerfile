@@ -24,4 +24,4 @@ LABEL org.opencontainers.image.source="https://github.com/your-username/Negotiat
 LABEL org.opencontainers.image.description="NegotiationRL-Pro for Meta PyTorch Hackathon"
 
 # Run the FastAPI server on launch
-CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["uvicorn", "server.app:app", "--host", "0.0.0.0", "--port", "7860"]

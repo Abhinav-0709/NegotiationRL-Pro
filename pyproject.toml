@@ -19,4 +19,8 @@ dependencies = [
     "fastapi",
     "uvicorn",
     "python-multipart",
+    "openenv-core>=0.2.0",
 ]
+
+[project.scripts]
+openenv-server = "server.app:app"
